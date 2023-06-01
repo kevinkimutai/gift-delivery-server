@@ -2,8 +2,8 @@ import cors from "cors";
 
 const whitelist = [
   "http://localhost:3000",
-  "http://localhost:4500",
-  "https://master--endearing-eclair-dd6f03.netlify.app/",
+  "http://localhost:4000",
+  "https://master--endearing-eclair-dd6f03.netlify.app",
 ];
 
 const corsOptions = {
