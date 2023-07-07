@@ -107,4 +107,9 @@ export class DBDataSource {
     const gifts = await Gift.find({ category });
     return gifts;
   }
+
+  async searchGifts(searchTerm) {
+    const gifts = await Gift.find({ $text: { $search: searchTerm } });
+    return gifts;
+  }
 }

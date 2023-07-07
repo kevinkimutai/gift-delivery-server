@@ -11,6 +11,10 @@ const resolvers = {
       console.log("Fetching gift with id:", args.id);
       return await dataSources.giftDB.getGift(args.id);
     },
+    searchGift: async (parent, args, { dataSources }, info) => {
+      console.log("Fetching gift with searchTerm:", args.search);
+      return await dataSources.giftDB.searchGifts(args.search);
+    },
     category: async (parent, args, { dataSources }, info) => {
       console.log("Fetching gifts category with id:", args.id);
       return await dataSources.giftDB.getCategory(args.id);

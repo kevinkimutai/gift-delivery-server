@@ -48,6 +48,12 @@ const giftSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+giftSchema.index({
+  name: "text",
+  category: "text",
+  "description.text": "text",
+});
+
 const Gift = mongoose.model("Gift", giftSchema);
 
 export default Gift;

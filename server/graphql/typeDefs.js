@@ -41,6 +41,7 @@ const typeDefs = gql`
     gift(id: ID): Gift
     category(id: ID): Category
     gifts: [Gift]
+    searchGift(search: String!): [Gift]
     giftsByCategory(id: ID): [Gift]
     categories: [Category]
 
